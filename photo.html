@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens & Light Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="photo-gallery">
+      <div class="gallery-header">
+        <h2>My Photography Gallery</h2>
+        <p>Explore a curated selection of my favorite moments and stories captured through the lens.</p>
+      </div>
+      <div class="gallery-container">
+        <img src="./assets/pic2.jpg" alt="Gallery Image 1" class="gallery-img" />
+        <img src="./assets/pic4.jpg" alt="Gallery Image 2" class="gallery-img" />
+        <img src="./assets/pic7.jpeg" alt="Gallery Image 3" class="gallery-img" />
+        <img src="./assets/pic3.jpg" alt="Gallery Image 4" class="gallery-img" />
+        <img src="./assets/pic 5.jpg" alt="Gallery Image 5" class="gallery-img" />
+        <img src="./assets/pic6.avif" alt="Gallery Image 6" class="gallery-img" />
+        <img src="./assets/pic8.jpg" alt="Gallery Image 7" class="gallery-img" />
+        <img src="./assets/pic10.avif" alt="Gallery Image 8" class="gallery-img" />
+        
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+      // Lightbox functionality
+      const modal = document.getElementById("lightbox-modal");
+      const modalImg = document.getElementById("lightbox-img");
+      const images = document.querySelectorAll(".gallery-img");
+      const closeBtn = document.querySelector(".close");
+
+      images.forEach(img => {
+        img.onclick = function() {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+      });
+
+      closeBtn.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+</body>
+</html>
