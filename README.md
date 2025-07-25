@@ -35,8 +35,10 @@ contact.html – Contact form and details.
 about.html – About Us information and features.
 style.css – Main stylesheet for layout, colors, and effects.
 assets – Folder containing images used in the gallery and store.
-How to Use
-Clone or download the repository.
+
+## How to Use
+## Clone or download the repository.
+
 Place your images in the assets folder.
 Open index.html in your browser to view the homepage.
 Navigate using the sidebar to explore other pages.
